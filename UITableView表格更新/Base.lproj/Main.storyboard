@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-LS-COh">
+                                <rect key="frame" x="0.0" y="20" width="600" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npk-yk-nmx">
+                                        <rect key="frame" x="10" y="10" width="30" height="20"/>
+                                        <state key="normal" title="添加"/>
+                                        <connections>
+                                            <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMn-6L-zH0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4S-k7-bJ5">
+                                        <rect key="frame" x="560" y="10" width="30" height="20"/>
+                                        <state key="normal" title="删除"/>
+                                        <connections>
+                                            <action selector="remove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fUN-TC-qyi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMh-1q-cNT">
+                                        <rect key="frame" x="285" y="5" width="30" height="30"/>
+                                        <state key="normal" title="更新"/>
+                                        <connections>
+                                            <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8U-nO-dQ7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifb-71-R2c">
+                                        <rect key="frame" x="90" y="10" width="60" height="20"/>
+                                        <state key="normal" title="编辑模式"/>
+                                        <connections>
+                                            <action selector="editing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H9l-Nf-uhW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.066386950989999999" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6cf-Zv-LRm"/>
+                                    <constraint firstItem="ifb-71-R2c" firstAttribute="leading" secondItem="Npk-yk-nmx" secondAttribute="trailing" constant="50" id="7A4-MT-39b"/>
+                                    <constraint firstAttribute="bottom" secondItem="q4S-k7-bJ5" secondAttribute="bottom" constant="10" id="7Ax-rH-iay"/>
+                                    <constraint firstItem="VMh-1q-cNT" firstAttribute="centerY" secondItem="fM8-LS-COh" secondAttribute="centerY" id="7yY-hI-nGA"/>
+                                    <constraint firstItem="Npk-yk-nmx" firstAttribute="centerY" secondItem="fM8-LS-COh" secondAttribute="centerY" id="AFE-fz-twu"/>
+                                    <constraint firstItem="q4S-k7-bJ5" firstAttribute="centerY" secondItem="fM8-LS-COh" secondAttribute="centerY" id="BtQ-Jb-l3J"/>
+                                    <constraint firstItem="ifb-71-R2c" firstAttribute="top" secondItem="fM8-LS-COh" secondAttribute="top" constant="10" id="IPf-U6-Nzw"/>
+                                    <constraint firstItem="VMh-1q-cNT" firstAttribute="centerX" secondItem="fM8-LS-COh" secondAttribute="centerX" id="Pke-wg-Okv"/>
+                                    <constraint firstItem="Npk-yk-nmx" firstAttribute="top" secondItem="fM8-LS-COh" secondAttribute="top" constant="10" id="YP8-SQ-h43"/>
+                                    <constraint firstAttribute="bottom" secondItem="ifb-71-R2c" secondAttribute="bottom" constant="10" id="nrG-2A-dIB"/>
+                                    <constraint firstItem="Npk-yk-nmx" firstAttribute="leading" secondItem="fM8-LS-COh" secondAttribute="leading" constant="10" id="qmj-LV-zEk"/>
+                                    <constraint firstAttribute="trailing" secondItem="q4S-k7-bJ5" secondAttribute="trailing" constant="10" id="yVd-UG-kai"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRi-lw-JQx">
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wd9-Gq-TCo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1Sb-Vp-tmZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wRi-lw-JQx" secondAttribute="bottom" id="JLQ-78-Fgn"/>
+                            <constraint firstItem="wRi-lw-JQx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Js0-FO-fyD"/>
+                            <constraint firstItem="fM8-LS-COh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oeg-ST-rbh"/>
+                            <constraint firstItem="fM8-LS-COh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bhU-4s-Zwo"/>
+                            <constraint firstItem="wRi-lw-JQx" firstAttribute="top" secondItem="fM8-LS-COh" secondAttribute="bottom" id="jel-DS-oyx"/>
+                            <constraint firstAttribute="trailing" secondItem="wRi-lw-JQx" secondAttribute="trailing" id="lJR-Lc-qer"/>
+                            <constraint firstAttribute="trailing" secondItem="fM8-LS-COh" secondAttribute="trailing" id="m29-p1-Phm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wRi-lw-JQx" id="eBM-Xw-zQj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-348" y="84"/>
+        </scene>
+    </scenes>
+</document>
